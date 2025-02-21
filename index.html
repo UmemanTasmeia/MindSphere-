@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindSphere - Mental Wellness Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
+</head>
+<body>
+
+    <!-- Login Page -->
+    <div id="login-page" class="page">
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Enter Username" required>
+            <input type="password" id="password" placeholder="Enter Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- Facial Expression Recognition Page -->
+    <div id="facial-recognition-page" class="page" style="display: none;">
+        <h2>AI Facial Expression Recognition</h2>
+        <p>Let the AI detect your emotions based on your facial expression.</p>
+        <video id="videoElement" width="640" height="480" autoplay muted></video>
+        <div id="emotion-display"></div>
+    </div>
+
+    <!-- Main Menu (After facial expression recognition) -->
+    <div id="main-menu" class="page" style="display: none;">
+        <h2>Choose an Activity</h2>
+        <button onclick="showLinks('music')">Music Therapy</button>
+        <button onclick="showLinks('motivation')">Motivation</button>
+        <button onclick="showLinks('books')">Books</button>
+        <button onclick="showLinks('games')">Games</button>
+    </div>
+
+    <!-- Links for each section -->
+    <div id="links-page" class="page" style="display: none;">
+        <h2>Links</h2>
+        <div id="links-content"></div>
+        <button onclick="backToMenu()">Back to Menu</button>
+    </div>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
